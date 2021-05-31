@@ -1,6 +1,8 @@
 # labs-qa
 
-This repositori contains an experimental Java module to run a simple Q&A pipeline using [huggingface models](https://huggingface.co/models). See the repo's Wiki to learn more.
+This repositori contains an experimental Java module to run a simple Q&A pipeline using [huggingface models](https://huggingface.co/models).
+
+The repo's Wiki contains different sources of information about this topic.
 
 ## Requirements
 ```
