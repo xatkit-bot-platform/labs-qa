@@ -39,3 +39,10 @@ target
 
 # Eclipse
 .settings
+
+data/
+training/
+__pycache__
+my_model
+mlruns
+
