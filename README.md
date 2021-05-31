@@ -1,5 +1,25 @@
 # labs-qa
 
+This repositori contains an experimental Java module to run a simple Q&A pipeline using [huggingface models](https://huggingface.co/models). See the repo's Wiki to learn more.
+
+## Requirements
+```
+$ pip install flask
+$ pip install transformers
+$ pip install torch
+```
+## Usage
+
+1. Clone this repo
+```
+git clone https://github.com/xatkit-bot-platform/labs-qa
+```
+2. Run the local server
+```
+flask run
+```
+3. Run the main class src/main/java/QuestionAnswering.java. You can edit the main method to specify your favourite huggingface endpoints (language models names).
+
 ## TO DO:
 
 * beginPosition and endPosition of the answers are expressed in terms of tokens (e.g. beginPosition = 10 means that the answers starts at the 10th token of the given corpus). Try to convert it to char positions (each language model may have a different tokenizer and therefore the tokens for the same corpus may be different for 2 language models)
