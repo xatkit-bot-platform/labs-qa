@@ -24,30 +24,6 @@ public class QuestionAnswering {
     @Setter
     private static String address = "http://127.0.0.1:5000/";
 
-
-    public void testQA(String endpoint) {
-        /*
-        JSONObject request = new JSONObject();
-        request.put("question", question);
-        request.put("corpus", corpus);
-        JSONObject response = new JSONObject();
-        try {
-            response = Unirest.post(address + endpoint)
-                    .header("Content-Type", "application/json")
-                    .body(request)
-                    .asJson().getBody().getObject();
-            this.setAnswer(response.getJSONObject("bert-large-uncased-whole-word-masking-finetuned-squad").getString("answer"));
-            //System.out.println("| " + question + " | " +
-                    //response.getJSONObject("bert-large-uncased-whole-word-masking-finetuned-squad").getString("answer") + " | ");
-                    //"["+response.getJSONObject("bert-large-uncased-whole-word-masking-finetuned-squad").getInt("paragraph_id")+"] "+
-                    //response.getJSONObject("bert-large-uncased-whole-word-masking-finetuned-squad").getString("answer") + " | ");
-        } catch (Exception e) {
-            Log.error(e, "An error occurred while computing the answer, see the attached exception");
-        }
-
-         */
-    }
-
     /**
      * Process a QuestionAnswering request.
      *
@@ -122,14 +98,14 @@ public class QuestionAnswering {
         QAObject qaObject = new QAObject("pablo_picasso.txt");
         List<String> modelNames = new ArrayList<String>();
         modelNames.add("ktrapeznikov/albert-xlarge-v2-squad-v2");
-        modelNames.add("twmkn9/albert-base-v2-squad2");
+        //modelNames.add("twmkn9/albert-base-v2-squad2");
         //modelNames.add("mrm8488/bert-tiny-5-finetuned-squadv2");
         //modelNames.add("bert-large-uncased-whole-word-masking-finetuned-squad");
         //modelNames.add("distilbert-base-cased-distilled-squad");
-        //modelNames.add("valhalla/longformer-base-4096-finetuned-squadv1");
+        //modelNames.add("mrm8488/longformer-base-4096-finetuned-squadv2");
         //modelNames.add("google/bigbird-base-trivia-itc");
 
-        //setModelNames(modelNames, "set-models");
+        setModelNames(modelNames, "set-models");
 
         Scanner in = new Scanner(System.in);
         while (true) {
@@ -145,5 +121,4 @@ public class QuestionAnswering {
             }
         }
     }
-
 }
